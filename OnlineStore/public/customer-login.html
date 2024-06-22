@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/customer-login.css" />
+  </head>
+  <body>
+    <div class="navbar" id="navbar-top">
+      <div class="left" id="customer-name">Customer Name</div>
+      <div id="customer-id">ID</div>
+      <div class="right">
+        <a href="#navbar-top">Home</a>
+        <a href="#prod">Products</a>
+        <a href="#">Coupons</a>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </div>
+    <h2 id="product-heading">Our Products</h2>
+    <div class="products" id="prod"></div>
+    <div id="orderModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Order Confirmation</h2>
+        <p> Product ID: <span id="modalProductId"></span> </p>
+        <p> Product Name: <span id="modalProductName"></span> </p>
+        <p> Product Description: <span id="modalProductDescription"></span> </p>
+        <p> Product Price: <span id="modalProductPrice"></span> </p>
+        <p>Quantity: <span id="modalProductQuantity"></span></p>
+        <button onclick="confirmOrder()">Order Now</button>
+      </div>
+    </div>
+    <script src="../scripts/customer-login.js">
+      
+    </script>
+  </body>
+</html>

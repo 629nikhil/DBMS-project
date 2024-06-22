@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin View</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/styles/admin-style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <span>Welcome, Admin</span>
+      </div>
+      <div class="navbar-right">
+        <a href="#" class="icon"><i class="fa fa-home"> Home</i></a>
+        <a href="/index.html" id="logoutButton" class="icon"
+          ><i class="fa fa-sign-out-alt"> LogOut</i></a
+        >
+      </div>
+    </nav>
+    <div class="container">
+      <div class="canvas">
+        <div class="heading">
+          <h2>Admin Dashboard</h2>
+        </div>
+        <div class="admin-functions">
+          <div class="up">
+            <button class="btn" id="showCustomerStats">Customer Stats</button>
+            <button class="btn" id="topCustomers">Top Customers</button>
+          </div>
+          <div class="down">
+            <button class="btn" id="addCoupanbtn">Add A Coupan</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="popupOverlay" class="popup-overlay">
+      <div class="popup-content">
+        <button class="close-btn" id="closePopupBtn">&times;</button>
+        <h2>Add Coupon</h2>
+        <form id="addCoupan" method="post">
+          <label for="couponCode">Coupon Code</label>
+          <input type="text" id="couponCode" name="couponCode" required />
+
+          <label for="discountPercentage">Discount Percentage</label>
+          <input
+            type="number"
+            id="discountPercentage"
+            name="discountPercentage"
+            min="0"
+            max="100"
+            required
+          />
+
+          <label for="expiryDate">Expiry Date</label>
+          <input type="date" id="expiryDate" name="expiryDate" required />
+
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            required
+          ></textarea>
+
+          <button type="submit" id="add_coupan">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../scripts/admin.js">
+      
+    </script>
+  </body>
+</html>
